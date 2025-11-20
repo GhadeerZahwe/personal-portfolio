@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 
-export const Newsletter = ({ status, message, onValidated }) => {
+export const StayConnected = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState('');
 
   useEffect(() => {
@@ -23,10 +23,12 @@ export const Newsletter = ({ status, message, onValidated }) => {
 
   return (
       <Col lg={12}>
-        <div className="newsletter-bx wow slideInUp">
+        <div className="StayConnected-bx wow slideInUp">
           <Row>
             <Col lg={12} md={6} xl={5}>
-              <h3>Subscribe to my Newsletter<br></br> & Never miss latest updates</h3>
+<h4 style={{ fontSize: "1.7rem", fontWeight: "600" }}>
+  Share your email to receive updates on new AI tools and apps I build.
+</h4>
               {status === 'sending' && <Alert>Sending...</Alert>}
               {status === 'error' && <Alert variant="danger">{message}</Alert>}
               {status === 'success' && <Alert variant="success">{message}</Alert>}

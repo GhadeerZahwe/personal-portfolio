@@ -284,12 +284,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner img {
   animation: updown 3s linear infinite;
-  width: 550px;       /* adjust size */
-  height: 550px;      /* same as width */
-  border-radius: 50%; /* makes it circular */
-  object-fit: cover;  /* cover the circle without stretching */
-  border: 2px solid #fff; /* optional border */
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid  rgba(50, 15, 35, 0.5) ; /* purple example */
 }
+
 @keyframes updown {
     0% {
         transform: translateY(-20px);

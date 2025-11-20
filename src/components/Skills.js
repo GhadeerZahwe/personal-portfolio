@@ -53,15 +53,15 @@ export const Skills = () => {
             <h5>AI & Machine Learning</h5>
         </div>
         <div className="item">
-            <img src={meter1} alt="UI/UX Design" />
+            <img src={meter2} alt="UI/UX Design" />
             <h5>UI/UX Design</h5>
         </div>
         <div className="item">
-            <img src={meter2} alt="Data Science" />
+            <img src={meter3} alt="Data Science" />
             <h5>Data Science & Analytics</h5>
         </div>
         <div className="item">
-            <img src={meter3} alt="IoT & Robotics" />
+            <img src={meter2} alt="IoT & Robotics" />
             <h5>IoT & Robotics</h5>
         </div>
                         </Carousel>

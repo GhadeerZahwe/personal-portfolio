@@ -71,7 +71,12 @@ const toRotate = [
         I’m passionate about Artificial Intelligence, Machine Learning, and building automation solutions. 
         I’m currently pursuing my master’s degree and constantly enhancing my skills in AI and ML.
         I’m eager to collaborate on projects related to development, AI, ML, and automation.
-    </p> <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+    </p> <button
+  onClick={() => window.open("https://github.com/GhadeerZahwe", "_blank")}
+>
+  Let’s Connect <ArrowRightCircle size={25} />
+</button>
+
               </div>}
             </TrackVisibility>
           </Col>

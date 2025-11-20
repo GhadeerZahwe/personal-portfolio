@@ -3,7 +3,13 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
-import certImg1 from "../assets/img/certImg1.jpeg";
+import certImg1 from "../assets/img/cert1.png";
+import certImg2 from "../assets/img/cert2.jpeg";
+import certImg3 from "../assets/img/cert3.jpeg";
+import certImg4 from "../assets/img/cert4.jpeg";
+import certImg5 from "../assets/img/cert5.jpeg";
+import certImg6 from "../assets/img/cert6.jpeg";
+
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
@@ -130,31 +136,36 @@ export const Projects = () => {
     link: "https://www.linkedin.com/posts/ghadeer-zahwe_awscommunityday2024-beirutdigitaldistrict-activity-7276582742086111232-mI2w?utm_source=share&utm_medium=member_desktop&rcm=ACoAADORqvEB_8CtfbODm6nVeiLCkJdOhU_ckeo",
   },
   ];
+
+
 const certifications = [
   {
     title: "Machine Learning Specialization by Andrew Ng (Coursera)",
-    img: certImg1,
-    link: "https://www.coursera.org/account/accomplishments/specialization/certificate-1"
+    img: certImg6,
+    link: "https://www.coursera.org/account/accomplishments/verify/4MFTEN24ZBOL?utm_source=ln&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
   },
   {
-    title: "Machine Learning – Supervised Learning: Theory and Practice (Fakker.AI)",
-    img: certImg1,
-    link: "https://www.fakker.ai/certificate-2"
+    title: "Machine Learning - Supervised Learning: Theory and Practice (Fakker.AI)",
+    img: certImg4,
   },
   {
-    title: "Certificate of Completion Internship at Alpha Technology Group Company",
-    img: certImg1,
-    link: "https://www.alphatech.com/certificate-3"
+    title: "Machine Learning - Unsupervised Learning: Theory and Practice (Fakker.AI)",
+    img: certImg5,
   },
   {
-    title: "Certificate of Completion FSW Bootcamp with SE Factory",
-    img: certImg1,
-    link: "https://www.sefactory.com/certificate-4"
+    title: "Certificate of Completion of Internship at Alpha Technology Group Company",
+    img: certImg3,
+    link: "https://www.linkedin.com/posts/ghadeer-zahwe_newbeginnings-newjourney-thankyou-activity-7018637395814154242-BQs2?utm_source=share&utm_medium=member_desktop&rcm=ACoAADORqvEB_8CtfbODm6nVeiLCkJdOhU_ckeo"
   },
   {
-    title: "Certificate of Completion AI Automation Course with Quantum Base",
+    title: "Certificate of Completion ofFSW Bootcamp with SE Factory",
+    img: certImg2,
+    link: "https://www.linkedin.com/posts/ghadeer-zahwe_softwaredevelopment-certificationachievement-activity-7168011718084825090-6Gsh?utm_source=share&utm_medium=member_desktop&rcm=ACoAADORqvEB_8CtfbODm6nVeiLCkJdOhU_ckeo"
+  },
+  {
+    title: "Certificate of Completion of AI Automation Course with Quantum Base",
     img: certImg1,
-    link: "https://www.quantumbase.ai/certificate-5"
+    link: "https://verify.myquantumbase.com/ai-specialist/ghadeer-zahwe"
   },
 ];
 
@@ -170,11 +181,9 @@ const certifications = [
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h2>Projects & Events</h2>
+                  <h3>Projects, Events, and Certifications</h3>
                   <p>
-                    Here are some of my projects and the events I have attended,
-                    showcasing my experience in Web Development, AI, ML, and
-                    Automation.
+                    Here are some of my projects, the events I have attended, and the certifications I have earned, showcasing my experience in Web Development, AI, ML, and Automation.
                   </p>
 
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
@@ -215,66 +224,87 @@ const certifications = [
 
                       {/* Events Tab */}
                     {/* Events Tab */}
-                      <Tab.Pane eventKey="second">
-                        <Row>
-                          {events.map((event, i) => (
-                            <Col md={6} key={i} style={{ marginBottom: "30px" }}>
-                              <div className="event-card">
-                                <h4
-                                  style={{
-                                    fontWeight: "bold",
-                                    marginBottom: "15px",
-                                    textAlign: "center",
-                                  }}
-                                >
-                                  {event.title}
-                                </h4>
+                  <Tab.Pane eventKey="second">
+  <Row>
+    {events.map((event, i) => (
+      <Col md={6} key={i} style={{ marginBottom: "30px" }}>
+        <div className="event-card">
+          <h4
+            style={{
+              fontWeight: "bold",
+              marginBottom: "15px",
+              textAlign: "center",
+            }}
+          >
+            {event.title}
+          </h4>
+          <Carousel interval={3000} indicators={false}>
+            {event.images.map((img, index) => (
+              <Carousel.Item key={index}>
+                <a
+                  href={event.link ? event.link : "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <img
+                    className="d-block"
+                    src={img}
+                    alt={`${event.title} - Slide ${index}`}
+                    style={{
+                      width: "90%",       // smaller width to avoid stretching
+                      maxHeight: "350px", // max height for consistency
+                      objectFit: "contain", // show full image
+                      borderRadius: "15px",
+                    }}
+                  />
+                </a>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
+      </Col>
+    ))}
+  </Row>
+</Tab.Pane>
 
-                                {/* Make carousel clickable */}
-                                <a href={event.link} target="_blank" rel="noopener noreferrer">
-                                  <Carousel interval={3000} indicators={false}>
-                                    {event.images.map((img, index) => (
-                                      <Carousel.Item key={index}>
-                                        <img
-                                          className="d-block w-100"
-                                          src={img}
-                                          alt={`${event.title} - Slide ${index}`}
-                                          style={{
-                                            height: "300px",
-                                            objectFit: "cover",
-                                            borderRadius: "15px",
-                                          }}
-                                        />
-                                      </Carousel.Item>
-                                    ))}
-                                  </Carousel>
-                                </a>
-                              </div>
-                            </Col>
-                          ))}
-                        </Row>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="third">
+                       <Tab.Pane eventKey="third">
   <Carousel interval={4000} indicators={false}>
     {certifications.map((cert, index) => (
       <Carousel.Item key={index}>
-        <a href={cert.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+        <a
+          href={cert.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "flex", flexDirection: "column", alignItems: "center" }}
+        >
           <img
-            className="d-block w-100"
+            className="d-block"
             src={cert.img}
             alt={cert.title}
             style={{
-              height: "350px",
-              objectFit: "cover",
-              borderRadius: "15px",
+              width: "80%",        // make it smaller than full width
+              maxHeight: "400px",  // set max height to prevent too big
+              objectFit: "contain", // show full image without cropping
+              borderRadius: "10px",
             }}
           />
-          <h5 style={{ color: "#fff", textAlign: "center", marginTop: "10px" }}>{cert.title}</h5>
+          <h5
+            style={{
+              color: "#fff",
+              textAlign: "center",
+              marginTop: "10px",
+              fontWeight: "500",
+            }}
+          >
+            {cert.title}
+          </h5>
         </a>
       </Carousel.Item>
     ))}
   </Carousel>
 </Tab.Pane>
+
                     </Tab.Content>
                   </Tab.Container>
                 </div>

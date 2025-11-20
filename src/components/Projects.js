@@ -1,8 +1,11 @@
 import { Container, Row, Col, Tab, Nav, Carousel } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg1 from "../assets/img/p1.png";
+import projImg2 from "../assets/img/p2.png";
+import projImg3 from "../assets/img/p3.png";
+import projImg4 from "../assets/img/p4.png";
+import projImg5 from "../assets/img/p5.png";
+import projImg6 from "../assets/img/p6.png";
 import certImg1 from "../assets/img/cert1.png";
 import certImg2 from "../assets/img/cert2.jpeg";
 import certImg3 from "../assets/img/cert3.jpeg";
@@ -35,28 +38,28 @@ export const Projects = () => {
       title: "Email AI Agent (n8n Automation)",
       description:
         "An AI-powered email assistant built with n8n to handle emails, perform live web searches, manage Google Calendar, and log interactions.",
-      imgUrl: projImg3,
+      imgUrl: projImg6,
       link: "https://github.com/GhadeerZahwe/Email-AI-Agent",
     },
     {
       title: "Titanic Survivors Prediction",
       description:
         "Machine learning model predicting Titanic passenger survival using features like age, sex, and ticket class.",
-      imgUrl: projImg1,
+      imgUrl: projImg3,
       link: "https://github.com/GhadeerZahwe/Predicting-Titanic-Survivors",
     },
     {
       title: "Heart Disease Classification",
       description:
         "ML project predicting heart disease using patient health data, including full workflow from preprocessing to model evaluation.",
-      imgUrl: projImg2,
+      imgUrl: projImg5,
       link: "https://github.com/GhadeerZahwe/Heart_Disease_Classifier",
     },
     {
       title: "Collaborative Movie Recommendation",
       description:
         "A Collaborative Movie Recommendation System using Item-Based Filtering with KNN to suggest top 10 similar movies based on user ratings.",
-      imgUrl: projImg3,
+      imgUrl: projImg6,
       link: "https://github.com/GhadeerZahwe/Collaborative-Recommendation-Movies",
     },
   ];
